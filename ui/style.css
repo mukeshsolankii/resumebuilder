@@ -1,0 +1,790 @@
+* {margin: 0; padding: 0;}
+
+
+html {
+	height: 1%;
+	/*Image only BG fallback*/
+	
+
+}
+/*form styles*/
+		#msform {
+			width: 900px;
+			margin: 40px auto;
+			margin-left: 8%;
+			text-align: center;
+			position: relative;
+			margin-bottom: 100px;
+		}
+		#msform fieldset {
+			background: #ebebeb;
+			border: 0 none;
+			border-radius: 3px;
+			box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+			padding: 20px 30px;
+
+			box-sizing: border-box;
+			width: 80%;
+			margin: 0 10%;
+
+			/*stacking fieldsets above each other*/
+			position: absolute;
+		}
+		/*Hide all except first fieldset*/
+		#msform fieldset:not(:first-of-type) {
+			display: none;
+		}
+		/*inputs*/
+		#msform input, #msform textarea {
+			padding: 15px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			margin-bottom: 10px;
+			width: 100%;
+			box-sizing: border-box;
+			font-family: montserrat;
+			color: #2C3E50;
+			font-size: 13px;
+		}
+		/*buttons*/
+		#msform .action-button {
+			width: 100px;
+			background: #14b285;
+			font-weight: bold;
+			color: white;
+			border: 0 none;
+			border-radius: 1px;
+			cursor: pointer;
+			padding: 10px 5px;
+			margin: 10px 5px;
+		}
+		#msform .action-button:hover, #msform .action-button:focus {
+			background: #3498DB;
+			box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+
+		}
+		/*headings*/
+		.fs-title {
+			font-size: 15px;
+			text-transform: uppercase;
+			color: #2C3E50;
+			margin-bottom: 10px;
+		}
+		.fs-subtitle {
+			font-weight: normal;
+			font-size: 13px;
+			color: #666;
+			margin-bottom: 20px;
+		}
+		/*progressbar*/
+		#progressbar {
+			margin-bottom: 30px;
+			margin-left: 50px;
+			overflow: hidden;
+			/*CSS counters to number the steps*/
+			counter-reset: step;
+
+		}
+		#progressbar li {
+			list-style-type: none;
+			color: white;
+			text-transform: uppercase;
+			font-size: 9px;
+			width: 23.33%;
+			float: left;
+			position: relative;
+		}
+		#progressbar li:before {
+			content: counter(step);
+			counter-increment: step;
+			width: 20px;
+			line-height: 20px;
+			display: block;
+			font-size: 10px;
+			border: 2px solid white;
+			color: white;
+			background: #3498DB;
+			border-radius: 50%;
+			margin: 0 auto 5px auto;
+			font-size: 15px;
+			padding: 3px;
+		}
+		/*progressbar connectors*/
+		#progressbar li:after {
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: #3498DB;
+			position: absolute;
+			left: -50%;
+			top: 13px;
+			z-index: -1; /*put it behind the numbers*/
+		}
+		#progressbar li:first-child:after {
+			/*connector not needed before the first step*/
+			content: none;
+		}
+		/*marking active/completed steps green*/
+		/*The number of the step and the connector before it = green*/
+		#progressbar li.active:before,  #progressbar li.active:after{
+			background: #14b285;
+			color: white;
+		}
+
+.top{
+	width: 100%;
+	height: 100px;
+	background-color: #F7FFFE;
+    position: fixed;
+	margin-top: -70px;
+	z-index: 2;
+	border-top: 4px solid #3498db;
+}
+.top div{
+	float: left;
+	margin-top: 20px;
+}
+
+.top .menu{
+	margin-left: 37%;
+}
+
+.top .menu ul li{
+	list-style-type: none;
+	float: left;
+	line-height: normal;
+	color: black;
+	letter-spacing: 0.06em;
+	font-weight: normal;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: Montserrat;
+
+}
+.top .menu ul li:hover{
+	color: #f44336;
+}
+
+
+.top .logo img{
+	margin-left: 2%;
+  margin-top: -25px;
+  height: 75px;
+  width: 50px;
+}
+#first_sec button{
+	margin-top: 50px;
+	padding:10px 30px;
+	font-size:1.3em;
+	font-family:'Courgette', sans-serif;
+	border:2.3px solid white;
+	border-radius:45px;
+	background-color: #f44336;
+	color: white;
+}
+#first_sec button:hover{
+	background-color: #2196f3;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+.content .step .stepimg{
+	width: 125px;
+	height: 188px;
+}
+.content .step .stepimg1{
+	width: 155px;
+	height: 187px;
+	left:188px;
+}
+
+.content .step .stepimg:hover{
+	width: 135;
+	height: 198px;
+	cursor: pointer;
+}
+.content .step .stepimg1:hover{
+	width: 165;
+	height: 197px;
+	cursor: pointer;
+}
+
+.content{
+	margin-top: 70px;
+	background-color: #F7FFFE;
+}
+.create{
+	position: absolute;
+	padding: 16px;
+	font-size: 22px;
+	font-family: 'Signika',arial;
+	background-color: #F44336;
+	border: 1px solid #F44336;
+	color: white;
+	font-weight: bold;
+	border-radius: 34px;
+	margin-bottom: 60px;
+	width: 260px;
+	top: 1403px;
+	
+}
+.create:hover{
+	background-color: #2ebe6e;
+	border: 1px solid #2ebe6e;
+	transition-delay: 0.3s;
+}
+.content .steps{
+	margin-top: 1090px;
+	width: 100%;
+	height: 400px;
+	background-image: url('/images/backd.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin-bottom: -117px;
+    z-index: 3;
+}
+.content .steps .insteps{
+
+	width: 100%;
+	height: 400px;
+	background: rgb(255, 255, 255);
+	overflow: hidden;
+	opacity: 0.9;
+}
+.content .steps .insteps .incon{
+	width: 80%;
+	margin: 0 auto;
+}
+.content .steps .insteps .incon .div1{
+	padding: 15px;
+	font-size: 60px;
+	color: #27AE60;
+	border: 3px solid #27AE60;
+	border-radius: 50%;
+	margin-left: 25%;
+	background-color: white;
+	cursor: pointer;
+	box-shadow: 0 0 15px 1px white;
+}
+#footer{
+	width: 100%;
+	height: 100px;
+	background-color: #3c3a3a;
+}
+.seclast{
+	background: url('/images/noise.jpg');
+	padding: 10px;
+	margin-top: -30px;
+}
+.content .steps .insteps .incon .arr{
+	font-size: 40px;
+	color: #27AE60;
+	margin-left: 8%;
+	margin-top: 30px;
+	position: absolute;
+}
+
+	/***template***/
+.template{
+	position: fixed;
+	left: 0;
+	top: 104px;
+	width: 80%;
+	height: calc(100vh - 100px);
+	background-color: #333;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 2;
+	font-family: 'Montserrat',arial;
+	border-top: 1px solid gainsboro;
+}
+.template-view{
+	transform: translateX(0);
+
+}
+.template .temp{
+	width: 100%;
+	height: calc(100vh - 100px);
+	overflow-y: scroll;
+	border-top: 1px solid gainsboro;
+}
+
+/***********Status**********/
+.status{
+	width: 20%;
+	position: fixed;
+	right: 0;
+	top: 100px;
+	height: calc(100vh - 100px);
+	
+	background-color: #333;
+	z-index: 1;
+	transform: translateX(100%);
+	transition: transform 0.3s ease-in-out;
+}
+.status-view{
+	transform: translateX(0);
+}
+.main{
+			margin-top: 30%;
+			margin-left: 89px;
+		}
+
+		.status .main .div2{
+			font-size: 38px;
+			border: 2px solid #e5594f;
+			color: #e5594f;
+			border-radius: 50%;
+			padding: 20px;
+		}
+		.div2:hover{
+			box-sizing: border-box;
+			box-shadow: 0 0 15px 1px #39cbeb;
+			cursor: pointer;
+		}
+		.status .main .activ{
+			color: #0AAE80;
+			border: 2px solid #0AAE80;
+			
+
+		}
+		.act{
+			color: lightgreen;
+		}
+
+
+
+.container {
+  position: relative;
+  margin-top: 50px;
+  width: 400px;
+  height: 500px;
+  float : left;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition:  background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+img {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  left: 0;
+}
+
+.title {
+  position: absolute;
+  width: 400px;
+  left: 0;
+  top: 230px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color:  #3498DB;
+  text-shadow: 2px 2px 2px black;
+  z-index: 1;
+  transition: top .5s ease;
+}
+a{
+	text-decoration: none;
+}
+
+.container:hover .title {
+  top: 140px;
+  color: white;
+}
+
+.button {
+  position: absolute;
+  width: 400px;
+  left:0;
+  top: 230px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.button a:hover{
+  background-color: #154360;
+  font-weight: bolder;
+  border: solid 2px white;
+  color: white;
+}
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+  background-color: #3498DB;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+
+/********ent_form*********/
+.ent_form{
+	position: fixed;
+	left: 0;
+	top: 104px;
+	width: 80%;
+	height: calc(100vh - 100px);
+	transform: translateY(-120%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 3;
+    overflow-y: scroll;
+	overflow-x: hidden;
+  font-family: montserrat, arial, verdana;
+
+  background-image: url(/images/backa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ent-view{
+	transform: translateY(0);
+}
+.back_but{
+  padding: 8px;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 40px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+.back_but:hover{
+  border: 2px solid #3498DB;
+  color: #3498DB;
+}
+.back_but .bc_fa{
+  color: #F44336;
+}
+.back_but:hover .bc_fa{
+  color: orange;
+}
+
+/*********Coming Soon Section.*********/
+.come_soon{
+	position: fixed;
+	left: 0;
+	top: 104px;
+	width: 80%;
+	height: calc(100vh - 100px);
+	background-color: #333;
+	transform: translateY(-120%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 4;
+    overflow-y: scroll;
+	overflow-x: hidden;
+    font-family: montserrat, arial, verdana;
+}
+
+.come-view{
+	transform: translateY(0);
+}
+.bac{
+	padding: 8px;
+	color: white;
+	font-size: 18px;
+	position: absolute;
+	margin-left: 2%;
+	margin-top: 2px;
+	border: 2px solid white;
+	border-radius: 10px;
+	cursor: pointer;
+	z-index: 3;
+	width: 90px;
+	text-align: center;
+}
+.bac:hover{
+	border: 2px solid #27AE60;
+	color: #27AE60;
+}
+.bac .bc_fa{
+  color: #F44336;
+}
+.bac:hover .bc_fa{
+  color: orange;
+}
+.cross{
+  position: fixed;
+  font-size: 30px;
+  margin-left:95%;
+  color: lightgray;
+  cursor: pointer;
+  top: 20px;
+}
+.cross:hover{
+  color: #F44336;
+}
+
+/*********Loader Section*********/
+.loader{
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 0px);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.loader > img{
+  width: 380px;
+  height: 300px;
+  margin-left: 35%;
+  margin-top: 15%;
+}
+.loader.hidden{
+	animation: fadeOut 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut{
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+/*************Image Effect********/
+.myImg{
+	margin-top: 20%;
+	border-radius: 50%;
+	position: absolute;
+	margin-left: -6%;
+	color: white;
+	background-color: #009688;
+	border: 2px solid white;
+	padding: 11px 13.4px;
+	cursor: pointer;
+	font-size:20px;
+	font-family: arial;
+}
+.myImg:hover{
+	background-color: #F44336;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
+}
+
+/* Modal Content (image) */
+.modal-content {
+    display: block;
+    width: 80%;
+	height: 800px;
+    max-width: 700px;
+	margin: auto 18%;
+	overflow-y: scroll;
+	margin-bottom: 200px;
+}
+
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+    .top{
+		width: 100%;
+		height: 70px;
+		background-color: white;
+		border-bottom: 1px solid gray;
+	    position: fixed;
+		margin-top: -70px;
+		z-index: 2;
+		border-top: 4px solid #39cbeb;
+	}
+	.top .menu{
+		display: none;
+	}
+	.content .steps{
+		display: none;
+	}
+	.content .seclast{
+		display: none;
+	}
+	#footer{
+		display: none;
+	}
+}
+
+
+.content #btnt{
+	display: inline-block;
+    top: 335px;
+    left: 123px;
+    text-transform: uppercase;
+    background: #0AAE80;
+    color: white;
+    text-align: left;
+    position: relative;
+    transition: 0.25s ease;
+    border: 2.3px solid white;
+    width: 15%;
+    border-radius: 100px;
+    min-width: 270px;
+    min-height: 55px;
+    z-index: 1;
+}
+
+.content #btnt:hover{
+	 color: white;
+    border: 2.3px solid white;
+}
+
+.content #btnt:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+.content #btnt::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 30px;
+    height: 100%;
+    border-radius: 100px;
+    background-color: #f44336;
+    transform-origin: left;
+    transition: 0.5s ease;
+    z-index: -1;
+}
+
+.mid_container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.move_arr{
+	width: 40px;
+	height: 9px;
+	left: 200px;
+	top: 22px;
+	transition: 0.2s;
+}
+.downArr{
+	animation-name: move;
+	animation-duration: 0.8s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	top: 578px;
+    width: 20px;
+    height: 48px;
+    left: 700;
+}
+#btnt:hover  .move_arr{
+	left: 210px;
+}
+@keyframes move{
+	from{
+		top: 578px;
+	}
+	to{
+		top: 586px;
+	}
+}
+
+
+.object {
+
+	display: flex;
+}
+
+.object .obj{
+	
+	flex: 1;
+}
+
+.object .obj1{
+	font-size: 12px;
+    border: 1px solid #c2bfbf;
+    height: 208px;
+    padding: 20px 10px 10px;
+    overflow-y: scroll;
+    border-left: none;
+}
+
+.object .obj1 p{
+	padding: 7px 5px 5px 20px;
+    font-size: 12px;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.object .obj1 p:hover{
+	margin-left: -8px;
+	cursor: pointer;
+}
+
+
+.edu{
+	display: flex;
+	justify-content: space-between;
+}

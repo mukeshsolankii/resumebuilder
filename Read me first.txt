@@ -1,0 +1,14 @@
+Website Link:- http://resume16.herokuapp.com/
+
+To run it in windows follow the below steps:-
+
+Step 1:- Install Node js by clicking on node-v16.15.0-x64
+
+Step 2:- Open Command prompt and go inside the folder clg-project-node and run this command
+ Cmmand:-  Node app.js
+
+Step 3: Open browser goto :- Localhost:3000/file
+
+Done.
+
+Note: use website link instead of an localhost:3000/file

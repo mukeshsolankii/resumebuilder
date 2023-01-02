@@ -1,0 +1,351 @@
+<!DOCTYPE>
+<html>
+<!--*** Author : Mukesh Solanki (Jai Rajputana)***-->
+<head>
+  <title> Resume</title>
+  	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="shortcut icon" type="icon/gif" href="/images/resum.png" />
+	<link rel="stylesheet" href="/ui/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Diplomata+SC|Signika|Abel|Merriweather+Sans|Montserrat|Roboto+Slab:700">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+	<script type="text/javascript" src="/ui/main.js"></script>
+</head>
+
+<body>
+  <!--***************This is a loading section Starts***************-->
+    <div class="loader">
+        <img  src="/images/play.gif" alt="Loading..."/>
+    <!--<h2 align="center" style="color: lightgray;margin-top: 41%;position: fixed;margin-left: 46%;">Loading...</h2>-->
+    </div>
+
+  <!--***************This is a loading section Ends***************-->
+
+            <!--***************************This is the Top Navigation Section Starts****************************-->
+	<div class="top">
+		<div class="mid_container">
+			<div class="logo">
+        	<img src="/images/vector.png" alt="Resume" style="height: 61px; width: 63px;position: absolute;left: 50px;right: 81.02%;bottom: 0%;top: 55px;">
+        	<span style="position: absolute;left: 139px;right: 41.98%;bottom: 28.92%;font-family: Montserrat;font-style: normal;font-weight: 600;font-size: 30px;line-height: normal;letter-spacing: 0.06em;color: #000000;top: 42px;">Resume</span>
+			</div>
+			<div class="menu">
+				<ul>
+					<li style="position: absolute;width: 95px;height: 26px;left: 808px;top: 59px;" id="home" class="hom" onclick="chan('home')" ><span class="fa">&#xf015;</span> Home</li>
+					<li  style="position: absolute;width: 95px;height: 26px;left: 965px;top:59px;" class="click-c progress" id="resume" onclick="chan('resume')">Resume</li>
+					<!-- <li  id="cover" class="click-cs" onclick="chan('cover')">Cover Letter</li> -->
+					<li  style="position: absolute;width: 95px;height: 26px;left: 1125px;top: 59px;"id="cv" class="click-cs" onclick="chan('cv')">Cv's</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+            <!--***************************This is the Top Navigation Section Ends****************************-->
+
+	     <!--***************************This is the Form Section Starts****************************-->
+   <div class="ent_form">
+   	<div style="background: #333;height: 100vh;opacity: 0.97;padding-top: 1px;">
+   <p class="cross" onclick="but()">X</p>
+   <div id="sec">
+   <div>
+     <b class="back_but" onclick="but()"><i class="fa bc_fa">&#xf04a;</i>  Back</b>
+   </div>
+	<div class="form">
+	<!-- multistep form -->
+    <!--<form id="msform" action="/temp" method="POST" target="_blank">-->
+	<div id="msform">
+	<!-- progressbar -->
+	<ul id="progressbar">
+		<li class="active">Personal Info</li>
+		<li>Objective / summary</li>
+		<li>QUALIFICATIONs</li>
+		<li>Skills</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<h2 class="fs-title">PERSONAL INFORMATION</h2>
+		<h3 class="fs-subtitle">This is step 1</h3>
+		<input type="text" name="name" placeholder="Full Name                                                 (Eg:- Chaman singh)" id="Name" style="text-transform: capitalize;" required/>
+		<input type="text" name="email" placeholder="Email                                                     (Eg:- chaman@gmail.com)" id="Email" required/>
+    <input type="text" name="phone" placeholder="Phone no.                                                     (Eg:- 9438203934)" id="Phone" required/>
+		<textarea name="add" placeholder="Address                                     (Eg:- Hno:-643,block-f,sec-23,Faridabad)" id="Address" required></textarea>
+    <input type="button" name="next" class="next action-button" value="Next ➤" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">OBJECTIVE</h2>
+		<h3 class="fs-subtitle">Objective or Summery of Yourself</h3>
+			<div class="object">
+			<div class="obj">
+			<textarea style="width: 50%px;height: 240px;" name="add" placeholder="Write a short Objective of yourself what you want to do. Your objective be should like -- 'Hey, I m the one you are looking for..'            OR --  You Can Also Select From Right Section." id="Objective"  required></textarea>
+			</div>
+			<div class="obj obj1">
+				<h3 style="background: white;margin: -20px -10px;padding: 10px;position: absolute;width: 44.2%;z-index: 4;">You can also select from here</h3>
+			
+				<p style="margin-top: 30px;"><img src="/images/add.png" style="width:20px;height: 50px;position:relative;padding:0; margin: -7px 7px -22px -32px;">Write a short Objective of yourself what you want to do. Your objective be should like ..</p>
+				
+				<p><img src="/images/add.png" style="width:20px;height: 50px;position:relative;padding:0; margin: -7px 7px -22px -32px;">Write a short Objective of yourself what you want to do. Your objective be should like ..</p>
+				
+				<p><img src="/images/add.png" style="width:20px;height: 50px;position:relative;padding:0; margin: -7px 7px -22px -32px;">Write a short Objective of yourself what you want to do. Your objective be should like ..</p>
+				
+				<p><img src="/images/add.png" style="width:20px;height: 50px;position:relative;padding:0; margin: -7px 7px -22px -32px;">Write a short Objective of yourself what you want to do. Your objective be should like ..</p>
+				
+				<p><img src="/images/add.png" style="width:20px;height: 50px;position:relative;padding:0; margin: -7px 7px -22px -32px;">Write a short Objective of yourself what you want to do. Your objective be should like ..</p>
+				
+				<p><img src="/images/add.png" style="width:20px;height: 50px;position:relative;padding:0; margin: -7px 7px -22px -32px;">Write a short Objective of yourself what you want to do. Your objective be should like ..</p>
+				
+			</div>
+			</div>
+		<input type="button" name="previous" class="previous action-button" value="◄ Previous" />
+		<input type="button" name="next" class="next action-button" value="Next ►" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">QUALIFICATIONs</h2>
+		<h3 class="fs-subtitle">Add information about your educational background</h3>
+    
+		
+    
+		<p align="left" style="margin-bottom: 10px;">10<sup>th</sup> Info.</p>
+    <div class="edu">
+		<input type="text" placeholder="School Name    eg: St john's School" style="padding: 5px 15px;width: 49%;">
+		<input type="text" name="facebook" placeholder="City   eg: Faridabad" style="padding: 5px 15px;width: 49%;">
+	</div>
+    <div class="edu">
+        <input type="text" placeholder="State    eg: Haryana" style="padding: 5px 15px;width: 32%;">
+		<input type="text" name="facebook" placeholder="Percentage (Optional)" style=" padding: 5px 15px;width: 35%;">
+		<input type="text" name="facebook" placeholder="Year of Passout" style=" padding: 5px 15px;width: 30%;">
+    </div>
+    
+    <p align="left" style="margin-bottom: 10px;">12<sup>th</sup> Info.</p>
+    <div class="edu">
+		<input type="text" placeholder="School Name    eg: St john's School" style="padding: 5px 15px;width: 49%;">
+		<input type="text" name="facebook" placeholder="City   eg: Faridabad" style="padding: 5px 15px;width: 49%;">
+	</div>
+    <div class="edu">
+       <input type="text" placeholder="State    eg: Haryana" style="padding: 5px 15px;width: 32%;">
+		<input type="text" name="facebook" placeholder="Percentage (Optional)" style=" padding: 5px 15px;width: 35%;">
+		<input type="text" name="facebook" placeholder="Year of Passout" style=" padding: 5px 15px;width: 30%;">
+    </div>
+
+    <p align="left" style="margin-bottom: 10px;">Degree Info.</p>
+    <div class="edu">
+		<input type="text" placeholder="College Name    eg: MVN University" style="padding: 5px 15px;width: 45%;">
+		<input type="text" name="facebook" placeholder="City   eg: Palwal" style="padding: 5px 15px;width: 22%;">
+		<input type="text" name="facebook" placeholder="State    eg: Haryana" style="padding: 5px 15px;width: 30%;">
+	</div>
+    <div class="edu">
+         <input type="text" placeholder="Enter the Degree     eg: BCA" style="padding: 5px 15px;width: 35%;">
+		<input type="text" name="facebook" placeholder="Percentage (Optional)" style=" padding: 5px 15px;width: 35%;">
+		<input type="text" name="facebook" placeholder="Year of Passout" style=" padding: 5px 15px;width: 27%;">
+    </div>
+
+
+		<input type="button" name="previous" class="previous action-button" value="◄ Previous">
+		<input type="button" name="next" class="next action-button" value="Next ►">
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">skills</h2>
+		<h3 class="fs-subtitle">Enter your top skills</h3>
+		<input type="text" name="fname" placeholder="eg. HTML" />
+		<input type="text" name="lname" placeholder="eg. JAVA" />
+		<input type="text" name="phone" placeholder="eg. Online Marketing" />
+		
+		<input type="button" name="previous" class="previous action-button" value="◄ Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="Create ◍" onclick="btn_sub()"/>
+	</fieldset>
+	</div>
+</div>
+</div>
+</div>
+</div>
+    <!--***************************This is the Form Section Ends****************************-->
+
+	<!--****************************This is Comming Soon Section Starts*********************************-->
+		<div class='come_soon'>
+      <p class="cross bs">X</p>
+		      <div style="margin:170px auto;">
+				  <p align="center" style="color: gray;font-family: 'Courgette';font-size: 40px;cursor: pointer;">CV's & Cover Letter are</p>
+				  <h2 align="center" style="color: lightgray;font-family: 'Diplomata SC';font-size: 38px;margin-top: 20px;cursor: pointer;">Coming Soon...</h2>
+				  <b class="bac bs" style="margin-left: 45%;margin-top: 50px;"><i class="fa bc_fa">&#xf060;</i> Back</b>
+			  </div>
+	    </div>
+	<!--****************************This is Comming Soon Section Starts*********************************-->
+
+			 <!--***************************This is the Template Section Starts****************************-->
+			 <div class="template">
+			 <p class="cross hom" style="margin-left: 94%;">X</p>
+				<div class="temp">
+				 <div class="sel-temp">
+						<h2 align="center" style="color: white;margin-top: 44px;font-size: 30px;margin-bottom: 7px;">Select Template</h2>
+						<p align="center" style="color: lightgray">Remember, <i>You can select any one resume Template.</i></p>
+				 </div>
+
+				   <div class="container" style="margin-left: 10%;">
+					  <img src="/images/res1.jpg" alt="" />
+					  <div class="title">Basic</div>
+					  <div class="overlay"></div>
+					  <div class="button"><a class="clc progress"  onclick="template_num(1); statusImg();"><b style="cursor: pointer">USE THIS</b></a></br><b class="myImg" onclick="imgonclick('/images/res1.jpg',1)" style=""><span class="fa">&#xf00e;</span></b></div>
+					</div>
+
+					<div class="container" style="margin-left: 5%;">
+					  <img src="/images/res2.jpg" alt="" />
+					  <div class="title">Professional</div>
+					  <div class="overlay"></div>
+					  <div class="button"><a class="clc progress" onclick="template_num(2); statusImg(); "><b style="cursor: pointer">USE THIS</b></a></br><b class="myImg" onclick="imgonclick('/images/res2.jpg',2)" style=""><span class="fa">&#xf00e;</span></b></div>
+					</div>
+
+					<div class="container" style="margin-left: 10%;margin-bottom: 60px;">
+					  <img src="/images/res3.jpg" alt="" />
+					  <div class="title">College</div>
+					  <div class="overlay"></div>
+					  <div class="button"><a class="clc progress" onclick="template_num(3); statusImg();"><b style="cursor: pointer">USE THIS</b></a></br><b class="myImg" onclick="imgonclick('/images/res3.jpg',3)" style=""><span class="fa">&#xf00e;</span></b></div>
+					</div>
+
+					<div class="container" style="margin-left: 5%;margin-bottom: 60px">
+					  <img src="/images/res2.jpg" alt="" />
+					  <div class="title">Functional</div>
+					  <div class="overlay"></div>
+					  <div class="button"><a class="clc progress" onclick="template_num(4); statusImg();"><b style="cursor: pointer">USE THIS</b></a></br><b class="myImg" onclick="imgonclick('/images/res2.jpg',4)" style=""><span class="fa">&#xf00e;</span></b></div>
+					</div>
+
+            <h3 align="center" style="color: gray;font-family: 'Courgette';margin-top: 120%;margin-bottom: 20px;">Choose the Template you Want!!</h3>
+				</div>
+				<!-- The Modal -->
+					<div id="myModal" class="modal">
+					  <span class="close">&times;</span>
+					  <img class="modal-content" id="img01">
+					  <div id="caption"></div>
+					</div>
+			 </div>
+
+			 <div class="status">
+				<div class="main">
+					<img src="/images/step1r.png" alt="Select Template" id="myImg1" style="width: 97px;left: 89px;height: 124px;top:48px;">
+					<!--<div id="x1" class="fa  div2" style="padding: 20px 22px;margin-bottom: 50%;">&#xf0c5;</div>  <b class="x1" style="color: #3498DB;font-size: 14px;font-family: 'Signika',cursive;margin-left: 10px;">Select Template</b> --><br>
+					<!-- <span class="fa x1"  style="font-size: 50px;color: #0AAE80;position: absolute;margin-top:-27%;margin-left: 10%">&#xf175;</span> -->
+					<img src="/images/step2R.png" alt="Select Template" id="myImg2" style="width: 80px;left: 98px;height: 125px;top: 215px;">
+					<!--<div  id="x12" class="fa  div2" style="margin-bottom: 50%;">&#xf044;</div>  <b class="x12" style="color: #3498DB;font-size: 16px;font-family: 'Signika',cursive;margin-left: 10px;">Edit It</b> --><br>
+					<!-- <span class="fa x12" style="font-size: 50px;color: rgb(229, 89, 79);position: absolute;margin-top:-27%;margin-left: 10%" >&#xf175;</span> -->
+					<img src="/images/step3R.png" alt="Select Template" id="myImg3" style="width: 80px;left: 98px;height: 125px;top: 385px;">
+					<!--<div id="x123" class="fa div2" style="padding: 20px 22px">&#xf019;</div> <b class="x123" style="color: #3498DB;font-size: 16px;font-family: 'Signika',cursive;margin-left: 10px;">Download It</b> --><br>
+				</div>
+				<!--<button id="progress"  style="font-size: 20px;padding: 10px; background-color: green;color: white;border-radius: 4px;border: 1px solid green;">Next -></button>-->
+			 </div>
+			 <!--***************************This is the Template Section Ends****************************-->
+
+
+			<!--***************************This is the Second Top Section Sarts****************************-->
+	<div class="content">
+		<div class="mid_container">
+			<div  id="first_sec" >
+				<h1 class="lax" data-lax-preset="zoomOut" style="position: absolute;font-family: 'Diplomata SC';color: #3c3c3c;left: 137px;top: 318px;">Now, It's Simple</h1>
+				<h2 class="lax" data-lax-preset="zoomOut" style="position: absolute;font-size: 2em;font-family: 'Courgette', sans-serif;color: #484848;left: 214px;top: 378px;">To Create CV's And Resume</h2>
+				<button  data-lax-preset="zoomOut" class="click-c progress lax" id="btnt">Create Resume <img src="/images/arrow.png" class="move_arr"></button>
+				<img class="lax" data-lax-preset="zoomOut" src="/images/top2.jpg" style="top: 180px;left: 763px;width: 374px;height: 306px;">
+				<img src="/images/downArr.png" alt="downArrow" class="downArr">
+			</div>
+		</div>
+
+		<div class="step" style="background-image: url('/images/rect0.svg');background-repeat: no-repeat;position: absolute;width: 100%;height: 800px;top: 538px;margin-left: ;">
+			<div class="mid_container">
+				<p class="lax" data-lax-preset="driftRight fadeInOut" style="font-size: 2em;color: white;font-family:'Courgette',Open Sans TTF;font-weight: 400;letter-spacing: 3px;font-size: 2.5rem;padding-bottom: 15px;text-align: center;margin-top: 224px;"><b>3</b> Easy Step to Build Resume</p>
+				<hr style="margin-bottom: 7%;margin-left: 40%;" width="20%" size="3" color="#56FEA3" >
+				<center>
+				<img src="/images/step1.png" alt="Select Template" class="stepimg1">
+				<img src="/images/step2.png" alt="Select Template" class="stepimg" style="left: 590px;">
+				<img src="/images/step3.png" alt="Select Template" class="stepimg" style="left: 962px;"></center>
+			</div>
+		</div>
+
+
+		<div class='steps'>
+			<div class='insteps'>
+				<div class="incon">
+					<div class="mid_container" >
+					<p  style="text-align: center;font-size: 3em; font-family: 'Signika',Arial;color:#4e7780;margin-bottom: 30px;margin-top: 125px;font-weight: bold;" align="center"><b style="font-size: 1.4em;">Here</b> You Go<span style="padding-right: 25px;">!</span> <button  class="create click-c progress">CREATE MY RESUME</button></p>
+					</div>
+					<!-- <p style="font-size: 2em;color: white;padding-top: 40px;font-family:'Courgette',Open Sans TTF;font-weight: 400;letter-spacing: 3px;font-size: 2.5rem;padding-bottom: 15px;text-shadow: 2px 2px 2px black;text-shadow: 2px 2px 2px black;"><b>3</b> Easy Step to Build Resume</p>
+					<hr style="margin-bottom: 7%;margin-left: 40%;" width="20%" size="3" color="skyblue" >
+					<span class="fa  div1" style="padding: 22px 27px;margin-left: 0%;">&#xf0c5;</span>
+					<b style="margin-top: 125px;margin-left: -10%;position: absolute;color: white;font-size:1em;font-family: 'Merriweather Sans',Garamond">SELECT TEMPLATE<br>
+					<i style="color: darkgray;font-size:0.8em;">Select any template<br>of resume of your<br>choise.</i>
+					</b>
+					<hr style="position: absolute;margin-top: -40px;margin-left: 16%;" width="20%" size="3" color="#27AE60">
+					<span class="fa arr">&#xf101;</span>
+					<span class="fa  div1" style="padding: 20px 25px">&#xf044;</span>
+					<b style="margin-top: 125px;margin-left: -9.5%;position: absolute;color: white;font-size:1em;font-family: 'Merriweather Sans',Garamond">EDIT IT<br>
+					<i style="color: darkgray;font-size:0.8em;">Edit the template<br>by providing your <br>infomation.</i>
+					</b>
+					<hr style="position: absolute;margin-top: -40px;margin-left: 43.5%;" width="20%" size="3" color="#27AE60">
+					<span class="fa arr">&#xf101;</span>
+					<span class="fa  div1" style="padding: 20px 25px">&#xf019;</span>
+					<b style="margin-top: 125px;margin-left: -9%;position: absolute;color: white;font-size:1em;font-family: 'Merriweather Sans',Garamond">DOWNLOAD IT<br>
+					<i style="color: darkgray;font-size:0.8em;">Then you can simply<br>download your<br>resume pdf.</i> 
+					</b>-->
+				</div>
+			</div>
+		</div>
+		    <!--***************************This is the Second Top Section Ends****************************-->
+
+		<!--***************************This is the Second Last Section Starts****************************-->
+		<!-- 
+		<div class="seclast">
+		<img src="/images/go.jpg" style="position: absolute;margin-left: 8%;margin-top:20px;width: 200px;height: 200px" alt="pen"/>
+		<p style="text-align: center;font-size: 3em; font-family: 'Signika',Arial;color:#323544;margin-bottom: 30px;margin-top: 50px;font-weight: bold;" align="center"><b style="font-size: 1.4em;">Here</b> You Go!</p>
+		<button  class="create click-c progress" >CREATE MY RESUME</button>
+    <b style="font-family: 'Courgette',Arial;font-size: 1.5em;margin-left:20px;margin-top: 13px;color:#00897B;position: absolute;">In just 2 minutes!!</b>
+		</div> -->
+		<!--***************************This is the Second Last Section Ends****************************-->
+
+
+		<!--***************************This is the Footer Section Starts****************************-->
+		<div class="footer" style="background-image: url('/images/footer.svg');background-repeat: no-repeat;position: absolute;height: 388px;width:100%; ">
+			<div class="mid_container">
+				<img src="/images/footer-logo.png" alt="Resume" style="width: 374px;height: 121px;left: 60px;top: 150px;">
+				<p class="lax" data-lax-preset="slalom"  style="color: lightgray;font-family: 'Signika',Helvetica,Arial;font-size: 1.2em;padding-top: 40px;float: right;margin-top: 210px;">Made with <b style="color: #f3746a;">❤</b> by Musa Fufa & Company, © 2018</p>
+			</div>
+		</div>
+
+		<!-- <div id="footer">
+
+			<p style="color: lightgray;font-family: 'Signika',Helvetica,Arial;font-size: 1.2em;padding-top: 40px;">Made with <b style="color: #e53935;">❤</b> by Musa Fufa & Company, © 2018</p>
+			<span class="fa" style="color: green;padding: 10px ;size: 2em;">&#xf232;</span>
+		</div> -->
+		<!--***************************This is the Footer Section Ends****************************-->
+	</div>
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+	<script>
+		
+
+// Get the modal
+var modal = document.getElementById('myModal');
+var temp_num = 0;
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+function imgonclick(src,temp_n){
+	var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+    modalImg.src = src;
+	temp_num = temp_n;
+	console.log("inside fun "+temp_num);
+}
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+//Template Number Function....
+	function template_num(temp_n){
+		temp_num = temp_n;
+	}
+	
+	
+</script>
+</body>
+</html>
